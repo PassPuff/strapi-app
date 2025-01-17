@@ -1,20 +1,6 @@
 export default [
   'strapi::logger',
   'strapi::errors',
-  {
-    name: 'strapi::security',
-    config: {
-      contentSecurityPolicy: {
-        useDefaults: true,
-        directives: {
-          'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', 'market-assets.strapi.io', 'res.cloudinary.com', 'https://strapi-backend-app.me'],
-          'media-src': ["'self'", 'data:', 'blob:', 'market-assets.strapi.io', 'res.cloudinary.com', 'https://strapi-backend-app.me'],
-          upgradeInsecureRequests: null,
-        },
-      },
-    },
-  },
   'strapi::security',
   'strapi::cors',
   'strapi::poweredBy',

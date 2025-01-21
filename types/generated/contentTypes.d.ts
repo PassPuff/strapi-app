@@ -465,6 +465,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
 export interface ApiTestPageTestPage extends Struct.SingleTypeSchema {
   collectionName: 'test_pages';
   info: {
+    description: '';
     displayName: 'Test Page';
     pluralName: 'test-pages';
     singularName: 'test-page';
@@ -488,6 +489,12 @@ export interface ApiTestPageTestPage extends Struct.SingleTypeSchema {
         };
       }>;
     header: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    image: Schema.Attribute.Media<'files' | 'images', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

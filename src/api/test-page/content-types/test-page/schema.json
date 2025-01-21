@@ -4,7 +4,8 @@
   "info": {
     "singularName": "test-page",
     "pluralName": "test-pages",
-    "displayName": "Test Page"
+    "displayName": "Test Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -30,6 +31,19 @@
         }
       },
       "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "files",
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
